@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="priority" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
+<org.eventb.core.poPredicate name="prioritz" org.eventb.core.predicate="priority∈Usagers → ℕ" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="priorit{" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+"/>
+<org.eventb.core.poIdentifier name="capacite" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="priorit|" org.eventb.core.predicate="capacite∈ℕ1" org.eventb.core.source="/Bus/BusCapacite.buc|org.eventb.core.contextFile#BusCapacite|org.eventb.core.axiom#("/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="Voyageurs" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="f" org.eventb.core.type="ℙ(ℤ×Usagers)"/>
+<org.eventb.core.poIdentifier name="newest" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="nouvel_usager" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="oldest" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="plus_ancien_usager" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poPredicate name="plus_ancien_usages" org.eventb.core.predicate="Voyageurs⊆Usagers" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="plus_ancien_usaget" org.eventb.core.predicate="finite(Voyageurs)" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="plus_ancien_usageu" org.eventb.core.predicate="card(Voyageurs)≤capacite" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.invariant#-"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv3/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usages"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#INITIALISATION\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv4/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usages"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="1∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#INITIALISATION\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv5/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usages"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="2≤1+1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#INITIALISATION\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/inv6/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usages"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="(∅ ⦂ ℙ(ℤ×Usagers))∈2 ‥ 1 ↣ Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#INITIALISATION\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act1/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="12">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usages">
+<org.eventb.core.poPredicate name="'" org.eventb.core.predicate="⊤" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="Voyageurs'⊆Usagers∧finite(Voyageurs')∧card(Voyageurs')≤capacite" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/AbstractBus.bum|org.eventb.core.machineFile#AbstractBus|org.eventb.core.event#'|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#INITIALISATION\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTplus_ancien_usages" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="oldest'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="nouvel_usager'" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="f'" org.eventb.core.type="ℙ(ℤ×Usagers)"/>
+<org.eventb.core.poIdentifier name="plus_ancien_usager'" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="newest'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Voyageurs'" org.eventb.core.type="ℙ(Usagers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPplus_ancien_usages" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTIDENTplus_ancien_usages" org.eventb.core.poStamp="11"/>
+<org.eventb.core.poSequent name="MONTER_DANS_LE_BUS/inv4/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usaget"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="newest+1∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#5"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#MONTER_DANS_LE_BUS\/inv4\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD3"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MONTER_DANS_LE_BUS/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usaget"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oldest≤(newest+1)+1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#MONTER_DANS_LE_BUS\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="MONTER_DANS_LE_BUS/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usaget"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f{newest+1 ↦ u}∈oldest ‥ newest+1 ↣ Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#0"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#MONTER_DANS_LE_BUS\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTplus_ancien_usaget" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="f'" org.eventb.core.type="ℙ(ℤ×Usagers)"/>
+<org.eventb.core.poIdentifier name="newest'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPplus_ancien_usaget" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTIDENTplus_ancien_usaget" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers∧u∉ran(f)" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="DESCENDRE_DU_BUS/grd3/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTHYPplus_ancien_usageu("/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oldest∈dom(f)∧f∈ℤ ⇸ Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTHYPplus_ancien_usageu("/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="DESCENDRE_DU_BUS/inv3/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usageu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oldest+1∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#4"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#DESCENDRE_DU_BUS\/inv3\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD2"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="DESCENDRE_DU_BUS/inv5/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usageu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="oldest+1≤newest+1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#DESCENDRE_DU_BUS\/inv5\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD4"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="DESCENDRE_DU_BUS/inv6/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTALLHYPplus_ancien_usageu"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="f ∖ {oldest ↦ u}∈oldest+1 ‥ newest ↣ Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poSequent#DESCENDRE_DU_BUS\/inv6\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD5"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTplus_ancien_usageu" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="oldest'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="f'" org.eventb.core.type="ℙ(ℤ×Usagers)"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTHYPplus_ancien_usageu(" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTIDENTplus_ancien_usageu" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1|org.eventb.core.guard#("/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="oldest≤newest" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1|org.eventb.core.guard#*"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPplus_ancien_usageu" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#EVTHYPplus_ancien_usageu(" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="f(oldest)=u" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.event#1|org.eventb.core.guard#,"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Bus/Copy of FIFO.bpo|org.eventb.core.poFile#Copy of FIFO|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="11">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="plus_ancien_usager∈Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="nouvel_usager∈Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="oldest∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#4"/>
+<org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="newest∈ℕ1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#5"/>
+<org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="oldest≤newest+1" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#\/"/>
+<org.eventb.core.poPredicate name="PRD5" org.eventb.core.predicate="f∈oldest ‥ newest ↣ Usagers" org.eventb.core.source="/Bus/Copy of FIFO.bum|org.eventb.core.machineFile#Copy of FIFO|org.eventb.core.invariant#."/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

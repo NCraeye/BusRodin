@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="Voyageurs :∣ Voyageurs' ⊆ Usagers ∧ finite(Voyageurs') ∧ card(Voyageurs') ≤ capacite" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="f ≔ ∅" org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="oldest, newest ≔ 2, 1" org.eventb.core.label="act2"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="(" org.eventb.core.target="Usagers"/>
+<org.eventb.core.variable name=")" org.eventb.core.identifier="f"/>
+<org.eventb.core.variable name="*" org.eventb.core.identifier="plus_ancien_voyageur"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="nouveau_voyageur"/>
+<org.eventb.core.event name="0" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MONTER_DANS_LE_BUS">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="nouveau_voyageur ∉ ran(f)"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="f(newest+1) ≔ u" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="newest ≔ newest + 1" org.eventb.core.label="act2"/>
+<org.eventb.core.refinesEvent name="+" org.eventb.core.target="MONTER_DANS_BUS"/>
+<org.eventb.core.witness name="," org.eventb.core.label="u" org.eventb.core.predicate="u=nouveau_voyageur"/>
+</org.eventb.core.event>
+<org.eventb.core.event name="1" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DESCENDRE_DU_BUS">
+<org.eventb.core.parameter name="'" org.eventb.core.identifier="u"/>
+<org.eventb.core.guard name="(" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ Usagers"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="oldest ≔ oldest + 1" org.eventb.core.label="act1"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="oldest ≤ newest"/>
+<org.eventb.core.guard name="," org.eventb.core.label="grd3" org.eventb.core.predicate="f(oldest) = u"/>
+<org.eventb.core.action name="+" org.eventb.core.assignment="f ≔ f∖{oldest ↦ u}" org.eventb.core.label="act2"/>
+<org.eventb.core.refinesEvent name="-" org.eventb.core.target="DESCENDRE_DU_BUS"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="oldest"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="newest"/>
+<org.eventb.core.invariant name="," org.eventb.core.label="inv1" org.eventb.core.predicate="plus_ancien_voyageur ∈ Usagers"/>
+<org.eventb.core.invariant name="-" org.eventb.core.label="inv2" org.eventb.core.predicate="nouveau_voyageur ∈ Usagers"/>
+<org.eventb.core.invariant name="4" org.eventb.core.label="inv3" org.eventb.core.predicate="oldest ∈ ℕ1"/>
+<org.eventb.core.invariant name="5" org.eventb.core.label="inv4" org.eventb.core.predicate="newest ∈ ℕ1"/>
+<org.eventb.core.invariant name="/" org.eventb.core.label="inv5" org.eventb.core.predicate="oldest ≤ newest + 1"/>
+<org.eventb.core.invariant name="." org.eventb.core.label="inv6" org.eventb.core.predicate="f ∈ Usagers ↣ oldest‥newest"/>
+<org.eventb.core.refinesMachine name="6" org.eventb.core.target="AbstractBus"/>
+</org.eventb.core.machineFile>
