@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="internal3" org.eventb.core.assignment="indice ≔ 0" org.eventb.core.label="act5"/>
+<org.eventb.core.action name="'" org.eventb.core.assignment="Passagers :∣ Passagers' ⊆ Usagers ∧ finite(Passagers') ∧ card(Passagers') ≤ capacite" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="internal1" org.eventb.core.assignment="descente_terminee ≔ 0" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="liste_attente ≔ ∅" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="internal2" org.eventb.core.assignment="trouve ≔ 0" org.eventb.core.label="act4"/>
+<org.eventb.core.action name="internal4" org.eventb.core.assignment="max_priorite ≔ −1" org.eventb.core.label="act6"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="Civisme"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="Usagers"/>
+<org.eventb.core.event name="5" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="PREPARE_MONTER">
+<org.eventb.core.action name="'" org.eventb.core.assignment="liste_attente ≔ liste_attente ∪ {u}" org.eventb.core.label="act1"/>
+<org.eventb.core.parameter name="(" org.eventb.core.identifier="u"/>
+<org.eventb.core.guard name=")" org.eventb.core.label="grd1" org.eventb.core.predicate="u ∈ Usagers ∧ u ∉ Passagers"/>
+</org.eventb.core.event>
+<org.eventb.core.seesContext name="-" org.eventb.core.target="ContexteConcret"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="liste_attente"/>
+<org.eventb.core.invariant name="2" org.eventb.core.label="inv2" org.eventb.core.predicate="liste_attente ⊆ Usagers"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv3" org.eventb.core.predicate="finite(liste_attente)"/>
+<org.eventb.core.variable name="&gt;" org.eventb.core.identifier="taille_liste_attente"/>
+<org.eventb.core.variable name="3" org.eventb.core.identifier="Passagers"/>
+<org.eventb.core.variable name="4" org.eventb.core.identifier="descente_terminee"/>
+<org.eventb.core.event name="6" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="CHOIX_FUTUR_PASSAGER">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="trouve = 0"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="Passagers ≔ Passagers ∪ liste_attente(indice) " org.eventb.core.label="act1"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="trouve ≔ 1" org.eventb.core.label="act2"/>
+<org.eventb.core.guard name="*" org.eventb.core.label="grd2" org.eventb.core.predicate="priorite(liste_attente(indice)) ≤ max_priorite"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="7" org.eventb.core.identifier="trouve"/>
+<org.eventb.core.invariant name="8" org.eventb.core.label="inv4" org.eventb.core.predicate="trouve ∈ 0‥1"/>
+<org.eventb.core.variable name="9" org.eventb.core.identifier="indice"/>
+<org.eventb.core.invariant name=":" org.eventb.core.label="inv5" org.eventb.core.predicate="indice ∈ ℕ"/>
+<org.eventb.core.variable name=";" org.eventb.core.identifier="max_priorite"/>
+<org.eventb.core.invariant name="=" org.eventb.core.label="inv6" org.eventb.core.predicate="max_priorite ∈ ℕ"/>
+<org.eventb.core.invariant name="?" org.eventb.core.label="inv7" org.eventb.core.predicate="taille_liste_attente ∈ ℕ"/>
+</org.eventb.core.machineFile>

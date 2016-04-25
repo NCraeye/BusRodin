@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.poFile org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="1">
+<org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="priorite" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
+<org.eventb.core.poPredicate name="prioritf" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/BusNath/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+"/>
+<org.eventb.core.poPredicate name="prioritg" org.eventb.core.predicate="priorite∈Usagers → ℕ" org.eventb.core.source="/BusNath/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#("/>
+<org.eventb.core.poIdentifier name="capacite" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="priorith" org.eventb.core.predicate="capacite∈ℕ1" org.eventb.core.source="/BusNath/BusCapacite.buc|org.eventb.core.contextFile#BusCapacite|org.eventb.core.axiom#("/>
+<org.eventb.core.poPredicate name="prioriti" org.eventb.core.predicate="card(Usagers)=3" org.eventb.core.source="/BusNath/ContexteConcret.buc|org.eventb.core.contextFile#ContexteConcret|org.eventb.core.axiom#)"/>
+<org.eventb.core.poPredicate name="prioritj" org.eventb.core.predicate="capacite=2" org.eventb.core.source="/BusNath/ContexteConcret.buc|org.eventb.core.contextFile#ContexteConcret|org.eventb.core.axiom#*"/>
+<org.eventb.core.poPredicate name="prioritk" org.eventb.core.predicate="∀u⦂Usagers·u∈Usagers⇒priorite(u)&lt;5" org.eventb.core.source="/BusNath/ContexteConcret.buc|org.eventb.core.contextFile#ContexteConcret|org.eventb.core.axiom#+"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poIdentifier name="Passagers" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="descente_terminee" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="indice" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="liste_attente" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="max_priorite" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="taille_liste_attente" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="trouve" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poPredicate name="taille_liste_attentf" org.eventb.core.predicate="Passagers⊆Usagers" org.eventb.core.source="/BusNath/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="taille_liste_attentg" org.eventb.core.predicate="finite(Passagers)" org.eventb.core.source="/BusNath/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.invariant#."/>
+<org.eventb.core.poPredicate name="taille_liste_attenth" org.eventb.core.predicate="card(Passagers)≤capacite" org.eventb.core.source="/BusNath/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.invariant#-"/>
+<org.eventb.core.poPredicate name="taille_liste_attenti" org.eventb.core.predicate="descente_terminee∈0 ‥ 1" org.eventb.core.source="/BusNath/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.invariant#,"/>
+<org.eventb.core.poPredicate name="taille_liste_attentj" org.eventb.core.predicate="liste_attente⊆Usagers" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#2"/>
+<org.eventb.core.poPredicate name="taille_liste_attentk" org.eventb.core.predicate="finite(liste_attente)" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#1"/>
+<org.eventb.core.poPredicate name="taille_liste_attentl" org.eventb.core.predicate="trouve∈0 ‥ 1" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#8"/>
+<org.eventb.core.poPredicate name="taille_liste_attentm" org.eventb.core.predicate="indice∈ℕ" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#:"/>
+<org.eventb.core.poPredicate name="taille_liste_attentn" org.eventb.core.predicate="max_priorite∈ℕ" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#="/>
+<org.eventb.core.poPredicate name="taille_liste_attento" org.eventb.core.predicate="taille_liste_attente∈ℕ" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#?"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poSequent name="INITIALISATION/inv1/INV" org.eventb.core.accurate="false" org.eventb.core.poDesc="Invariant  establishment" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTALLHYPtaille_liste_attentf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="0∈ℕ" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poSequent#INITIALISATION\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYV" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act2/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTALLHYPtaille_liste_attentf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="descente_terminee'=0" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'|org.eventb.core.action#internal1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'|org.eventb.core.action#internal1"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poSequent#INITIALISATION\/act2\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="INITIALISATION/act3/SIM" org.eventb.core.accurate="false" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTALLHYPtaille_liste_attentf"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="liste_attente'=(∅ ⦂ ℙ(Usagers))" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/BusNath/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#'|org.eventb.core.action#)"/>
+<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#'"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poSelHintSnd="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poSequent#INITIALISATION\/act3\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtaille_liste_attentf" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="liste_attente'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="taille_liste_attente'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="descente_terminee'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="Passagers'" org.eventb.core.type="ℙ(Usagers)"/>
+<org.eventb.core.poIdentifier name="trouve'" org.eventb.core.type="ℤ"/>
+<org.eventb.core.poIdentifier name="max_priorite'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtaille_liste_attentf" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTIDENTtaille_liste_attentf" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poSequent name="LOOP/inv1/INV" org.eventb.core.accurate="true" org.eventb.core.poDesc="Invariant  preservation" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTALLHYPtaille_liste_attentg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="indice+1∈ℕ" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#\/"/>
+<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.invariant#1"/>
+<org.eventb.core.poSelHint name="SEQHYT" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poSequent#LOOP\/inv1\/INV|org.eventb.core.poPredicateSet#SEQHYP"/>
+<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ALLHYP|org.eventb.core.poPredicate#PRD0"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poSequent name="LOOP/indice/EQL" org.eventb.core.accurate="true" org.eventb.core.poDesc="Equality of common variables" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTALLHYPtaille_liste_attentg"/>
+<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="indice+1=indice" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#\/|org.eventb.core.action#'"/>
+<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.event#\/"/>
+<org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poSequent#LOOP\/indice\/EQL|org.eventb.core.poPredicateSet#SEQHYP"/>
+</org.eventb.core.poSequent>
+<org.eventb.core.poPredicateSet name="EVTIDENTtaille_liste_attentg" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="0">
+<org.eventb.core.poIdentifier name="indice'" org.eventb.core.type="ℤ"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="EVTALLHYPtaille_liste_attentg" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#EVTIDENTtaille_liste_attentg" org.eventb.core.poStamp="0"/>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/BusNath/ChoixListeAttente.bpo|org.eventb.core.poFile#ChoixListeAttente|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="8">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="indice∈ℕ" org.eventb.core.source="/BusNath/ChoixListeAttente.bum|org.eventb.core.machineFile#ChoixListeAttente|org.eventb.core.invariant#1"/>
+</org.eventb.core.poPredicateSet>
+</org.eventb.core.poFile>

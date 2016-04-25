@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
+<org.eventb.core.action name="'" org.eventb.core.assignment="indice ≔ 0" org.eventb.core.label="act1"/>
+<org.eventb.core.action name="(" org.eventb.core.assignment="Passagers :∣ Passagers' ⊆ Usagers ∧ finite(Passagers') ∧ card(Passagers') ≤ capacite" org.eventb.core.label="act2"/>
+<org.eventb.core.action name=")" org.eventb.core.assignment="" org.eventb.core.label="act3"/>
+<org.eventb.core.action name="*" org.eventb.core.assignment="" org.eventb.core.label="act4"/>
+</org.eventb.core.event>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="ListeAttente"/>
+<org.eventb.core.seesContext name=")" org.eventb.core.target="Usagers"/>
+<org.eventb.core.seesContext name="." org.eventb.core.target="ContexteConcret"/>
+<org.eventb.core.seesContext name="*" org.eventb.core.target="BusCapacite"/>
+<org.eventb.core.variable name="+" org.eventb.core.identifier="liste_attente"/>
+<org.eventb.core.variable name="," org.eventb.core.identifier="Passagers"/>
+<org.eventb.core.variable name="-" org.eventb.core.identifier="descente_terminee"/>
+<org.eventb.core.event name="/" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="LOOP">
+<org.eventb.core.action name="'" org.eventb.core.assignment="indice ≔ indice + 1" org.eventb.core.label="act1"/>
+</org.eventb.core.event>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="indice"/>
+<org.eventb.core.invariant name="1" org.eventb.core.label="inv1" org.eventb.core.predicate="indice ∈ ℕ"/>
+</org.eventb.core.machineFile>
