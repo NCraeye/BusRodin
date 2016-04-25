@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.machineFile org.eventb.core.configuration="org.eventb.core.fwd" version="5">
-<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="INITIALISATION">
-<org.eventb.core.refinesEvent name="(" org.eventb.core.target="INITIALISATION"/>
-</org.eventb.core.event>
-<org.eventb.core.refinesMachine name="(" org.eventb.core.target="BusAbstrait"/>
+<org.eventb.core.event name="'" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="INITIALISATION"/>
+<org.eventb.core.refinesMachine name="(" org.eventb.core.target="Civisme"/>
 <org.eventb.core.seesContext name="*" org.eventb.core.target="Usagers"/>
-<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="MONTER_DANS_BUS">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="⊤"/>
+<org.eventb.core.event name="+" org.eventb.core.convergence="0" org.eventb.core.extended="true" org.eventb.core.label="MONTER_DANS_BUS">
+<org.eventb.core.guard name="'" org.eventb.core.label="grd5" org.eventb.core.predicate="∀usager · usager ∈ Liste_attente ⇒ (priorite(u) ≥ priorite(usager) ∧ ordonner(u) ≤ ordonner(usager))"/>
+<org.eventb.core.refinesEvent name="(" org.eventb.core.target="MONTER_DANS_BUS"/>
 </org.eventb.core.event>
-<org.eventb.core.event name="," org.eventb.core.convergence="0" org.eventb.core.extended="false" org.eventb.core.label="DESCENDRE_DU_BUS">
-<org.eventb.core.guard name="'" org.eventb.core.label="grd1" org.eventb.core.predicate="⊤"/>
-</org.eventb.core.event>
+<org.eventb.core.seesContext name="-" org.eventb.core.target="BusCapacite"/>
+<org.eventb.core.variable name="." org.eventb.core.identifier="Passagers"/>
+<org.eventb.core.variable name="/" org.eventb.core.identifier="descente_terminee"/>
+<org.eventb.core.variable name="0" org.eventb.core.identifier="Liste_attente"/>
+<org.eventb.core.variable name="1" org.eventb.core.identifier="ordonner"/>
+<org.eventb.core.variable name="2" org.eventb.core.identifier="ticket_courant"/>
 </org.eventb.core.machineFile>
