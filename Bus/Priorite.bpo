@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<org.eventb.core.poFile org.eventb.core.poStamp="35">
-<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poFile org.eventb.core.poStamp="40">
+<org.eventb.core.poPredicateSet name="CTXHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="Usagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="priorite" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
 <org.eventb.core.poPredicate name="prioritf" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+"/>
@@ -8,7 +8,7 @@
 <org.eventb.core.poIdentifier name="capacite" org.eventb.core.type="ℤ"/>
 <org.eventb.core.poPredicate name="priorith" org.eventb.core.predicate="capacite∈ℕ1" org.eventb.core.source="/Bus/BusCapacite.buc|org.eventb.core.contextFile#BusCapacite|org.eventb.core.axiom#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="ABSHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="Liste_attente" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="Passagers" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="descente_terminee" org.eventb.core.type="ℤ"/>
@@ -19,65 +19,52 @@
 <org.eventb.core.poPredicate name="descente_terminej" org.eventb.core.predicate="Liste_attente⊆Usagers" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#2"/>
 <org.eventb.core.poPredicate name="descente_terminek" org.eventb.core.predicate="finite(Liste_attente)" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.invariant#1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminef" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminef" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#CTXHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="Liste_attente'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="Passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="descente_terminee'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminef" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminef" org.eventb.core.poStamp="26"/>
-<org.eventb.core.poPredicateSet name="EVTIDENTdescente_termineg" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminef" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminef" org.eventb.core.poStamp="40"/>
+<org.eventb.core.poPredicateSet name="EVTIDENTdescente_termineg" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
 <org.eventb.core.poIdentifier name="Liste_attente'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_termineg" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_termineg" org.eventb.core.poStamp="35">
-<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers∧u∉Passagers∧u∉Liste_attente" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#5|org.eventb.core.guard#)"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_termineg" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_termineg" org.eventb.core.poStamp="40">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers∧u∉Passagers∧u∉Liste_attente" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#5|org.eventb.core.guard#grd1"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="MONTER_DANS_BUS/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="34">
+<org.eventb.core.poSequent name="MONTER_DANS_BUS/grd5/WD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Well-definedness of Guard" org.eventb.core.poStamp="40">
 <org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTHYPdescente_terminehx"/>
 <org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="∀usager⦂Usagers·usager∈Liste_attente⇒u∈dom(priorite)∧priorite∈Usagers ⇸ ℤ∧usager∈dom(priorite)" org.eventb.core.source="/Bus/Priorite.bum|org.eventb.core.machineFile#Priorite|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 <org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="DEFAULT" org.eventb.core.source="/Bus/Priorite.bum|org.eventb.core.machineFile#Priorite|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 <org.eventb.core.poSelHint name="SEQHYS" org.eventb.core.poSelHintFst="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTHYPdescente_terminehx"/>
 </org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTdescente_termineh" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="26">
+<org.eventb.core.poPredicateSet name="EVTIDENTdescente_termineh" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
+<org.eventb.core.poIdentifier name="Liste_attente'" org.eventb.core.type="ℙ(Usagers)"/>
 <org.eventb.core.poIdentifier name="Passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTHYPdescente_terminehx" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_termineh" org.eventb.core.poStamp="0">
+<org.eventb.core.poPredicateSet name="EVTHYPdescente_terminehx" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_termineh" org.eventb.core.poStamp="40">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Usagers∧u∉Passagers" org.eventb.core.source="/Bus/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.event#)|org.eventb.core.guard#)"/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="card(Passagers)&lt;capacite" org.eventb.core.source="/Bus/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.event#)|org.eventb.core.guard#*"/>
 <org.eventb.core.poPredicate name="PRD2" org.eventb.core.predicate="descente_terminee=1" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#(|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD3" org.eventb.core.predicate="u∈Liste_attente" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#6|org.eventb.core.guard#("/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_termineh" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTHYPdescente_terminehx" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_termineh" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTHYPdescente_terminehx" org.eventb.core.poStamp="40">
 <org.eventb.core.poPredicate name="PRD4" org.eventb.core.predicate="∀usager⦂Usagers·usager∈Liste_attente⇒priorite(u)≥priorite(usager)" org.eventb.core.source="/Bus/Priorite.bum|org.eventb.core.machineFile#Priorite|org.eventb.core.event#+|org.eventb.core.guard#'"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminei" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminei" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="u" org.eventb.core.type="Usagers"/>
 <org.eventb.core.poIdentifier name="Passagers'" org.eventb.core.type="ℙ(Usagers)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminei" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminei" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminei" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminei" org.eventb.core.poStamp="40">
 <org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="u∈Passagers" org.eventb.core.source="/Bus/BusAbstrait.bum|org.eventb.core.machineFile#BusAbstrait|org.eventb.core.event#*|org.eventb.core.guard#("/>
 <org.eventb.core.poPredicate name="PRD1" org.eventb.core.predicate="descente_terminee=0" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#*|org.eventb.core.guard#)"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poSequent name="AUTORISER_MONTEE/grd1/GRD" org.eventb.core.accurate="true" org.eventb.core.poDesc="Guard strengthening (split)" org.eventb.core.poStamp="34">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTALLHYPdescente_terminej"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="descente_terminee=1" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#0|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#9"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#0|org.eventb.core.guard#'"/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Priorite.bum|org.eventb.core.machineFile#Priorite|org.eventb.core.event#4"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poSequent#AUTORISER_MONTEE\/grd1\/GRD|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poSequent name="AUTORISER_MONTEE/act1/SIM" org.eventb.core.accurate="true" org.eventb.core.poDesc="Action simulation" org.eventb.core.poStamp="34">
-<org.eventb.core.poPredicateSet name="SEQHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTALLHYPdescente_terminej"/>
-<org.eventb.core.poPredicate name="SEQHYQ" org.eventb.core.predicate="descente_terminee=0" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#0|org.eventb.core.action#("/>
-<org.eventb.core.poSource name="SEQHYR" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/ListeAttente.bum|org.eventb.core.machineFile#ListeAttente|org.eventb.core.event#9"/>
-<org.eventb.core.poSource name="SEQHYS" org.eventb.core.poRole="ABSTRACT" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#0|org.eventb.core.action#("/>
-<org.eventb.core.poSource name="SEQHYT" org.eventb.core.poRole="CONCRETE" org.eventb.core.source="/Bus/Priorite.bum|org.eventb.core.machineFile#Priorite|org.eventb.core.event#4"/>
-<org.eventb.core.poSelHint name="SEQHYU" org.eventb.core.poSelHintFst="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poSelHintSnd="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poSequent#AUTORISER_MONTEE\/act1\/SIM|org.eventb.core.poPredicateSet#SEQHYP"/>
-</org.eventb.core.poSequent>
-<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminej" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="34">
+<org.eventb.core.poPredicateSet name="EVTIDENTdescente_terminej" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ALLHYP" org.eventb.core.poStamp="40">
 <org.eventb.core.poIdentifier name="descente_terminee'" org.eventb.core.type="ℤ"/>
 </org.eventb.core.poPredicateSet>
-<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminej" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminej" org.eventb.core.poStamp="34"/>
-<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="26"/>
+<org.eventb.core.poPredicateSet name="EVTALLHYPdescente_terminej" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#EVTIDENTdescente_terminej" org.eventb.core.poStamp="40">
+<org.eventb.core.poPredicate name="PRD0" org.eventb.core.predicate="descente_terminee=1" org.eventb.core.source="/Bus/Civisme.bum|org.eventb.core.machineFile#Civisme|org.eventb.core.event#0|org.eventb.core.guard#'"/>
+</org.eventb.core.poPredicateSet>
+<org.eventb.core.poPredicateSet name="ALLHYP" org.eventb.core.parentSet="/Bus/Priorite.bpo|org.eventb.core.poFile#Priorite|org.eventb.core.poPredicateSet#ABSHYP" org.eventb.core.poStamp="40"/>
 </org.eventb.core.poFile>
