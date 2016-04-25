@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <org.eventb.core.scContextFile org.eventb.core.accurate="true" org.eventb.core.configuration="org.eventb.core.fwd;org.animb.valuation.valBase">
-<org.eventb.core.scAxiom name="'" org.eventb.core.label="fonction_priority" org.eventb.core.predicate="priority∈Usagers → ℕ" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
-<org.eventb.core.scAxiom name="(" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="'" org.eventb.core.label="axm1" org.eventb.core.predicate="finite(Usagers)" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#+" org.eventb.core.theorem="false"/>
+<org.eventb.core.scAxiom name="(" org.eventb.core.label="fonction_priorite" org.eventb.core.predicate="priorite∈Usagers → ℕ" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.axiom#(" org.eventb.core.theorem="false"/>
 <org.eventb.core.scCarrierSet name="Usagers" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.carrierSet#'" org.eventb.core.type="ℙ(Usagers)"/>
-<org.eventb.core.scConstant name="priority" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
+<org.eventb.core.scConstant name="priorite" org.eventb.core.source="/Bus/Usagers.buc|org.eventb.core.contextFile#Usagers|org.eventb.core.constant#)" org.eventb.core.type="ℙ(Usagers×ℤ)"/>
 </org.eventb.core.scContextFile>
